@@ -119,5 +119,141 @@ Elastic IP allocation ID: Click on Allocate Elastic IP to generate it.
 
 click create NAT gateway.
 
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/e40b98ee-dd32-4669-93b8-1aa359017b32)
+
+# AMI/Launch Template
+We are going to create a AMI with a bootstrap of Apache 2 included in the user data.
+
+Search AMI in the search bar.
+
+Click AMI Catalog and search for Ubuntu, choose the free tier Ubuntu Server 22.04
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/e9df72bd-4ac0-4fe0-b40d-c6f5d10f83e3)
+
+Click Create AMI with Template.
+
+Name: Toy-Buzz-EC2-AMI.
+
+Template version description: Template for EC2.
+
+Auto Scaling guidance: ✅
+
+Application and OS Images (Amazon Machine Image): Ubuntu.
+
+Instance Type: t2.micro.
+
+Key Pair: Toy-Buzz-KeyPair.
+
+Network Settings:
+
+Subnet: Do not included in launch template.
+
+Create Security Group: ✅
+
+Security Group Name: Toy-Buzzz-SG.
+
+Description: Security Group for Toy-Buzz.
+
+Advanced Details:
+
+1. User Data:
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6d7790e4-8990-43e3-a80d-b284fd0b02a5)
+
+This is going to install Apache to our EC2 Instances.
+
+Click Create Template.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6e1b76ed-36b8-4dd4-8d7e-77ee35b66ba5)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/fbb34297-4cdf-4a79-bc18-963832fb0d2e)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/8744b521-9c79-4740-a806-f856ed6082ba)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/72407757-8474-4dff-bb9c-6899dc731c88)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/ecb72abc-5386-4194-ad73-70f62caf99d5)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/bf5be477-5f05-4c69-af9f-c5ba3524c498)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/7686b73a-1022-4736-8de3-e1419e6a66c8)
+
+# Web Security Group
+Within our launch template, we specified to create a security group, lets verify it is created.
+
+Type security group in the search bar.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/9cc4c7d6-6f63-4ffe-921b-e3488a92a298)
+
+Click Toy-Buzz-SG ID.
+
+Let’s add inbound permissions, click edit inbound rules.
+
+Add Rules:
+
+HTTPS Port 443.
+HTTP Port 80.
+SSH Port 22.
+Custom TCP Port 8080.
+Set them to your IP Address for best practice standards.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/102678c4-fff7-4683-b068-08afc66602a2)
+
+Click save rules.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/b4b85b12-b287-43f6-a00f-72ccdcaf8840)
+
+# Autoscaling Group
+We need an Autoscaling Group, type Autoscaling Group in the search bar.
+
+Click create Auto scaling Group.
+
+Auto-scaling group name: Toy-Buzz-ASG.
+
+Launch template: Toy-Buzz-EC2-AMI.
+
+Version: Default (1)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6ce0861e-21e7-4d18-b79f-e79307bc6f33)
+
+Click next.
+
+VPC: Toy-Buzz-VPC.
+
+Availability Zones and subnets: Toy-Blitz-Subnet-1, Toy-Buzz-Subnet-2.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/71f61a25-f903-4111-ab83-0ee39b4c3704)
+
+Skip Load Balancer.
+
+Desire Capacity: 2
+
+Min. Desire Capacity: 2.
+
+Max Desired Capacity: 5
+
+Automatic scaling: No scaling policies.
+
+Instance maintenance policy: No policy.
+
+Click next.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/385f9b57-8fd0-4d94-a9b7-f130304d3a9a)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/18f1fcb0-f562-4121-a7da-d7f1e64632b1)
+
+
+Skip Notifications & Tags.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6c9b0f15-0318-4936-9f15-d799c4303960)
+
+Click create Auto Scaling Group.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/57e51e42-4e52-4494-9589-fe9dd3fda1a9)
+
+Lets verify our EC2’s were created.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6feb419a-feef-4345-887a-59c2f24ba66d)
+
 
 
