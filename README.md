@@ -55,5 +55,20 @@ IPv4 subnet CIDR block: 10.0.1.0/24
 
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/f9978444-7e6c-4387-aafa-92d146da897a)
 
+Now we need to create the second public subnet.
+
+Subnet Name: Toy-Buzz-Public-Subnet-2
+
+Availability Zone: US East (N. Virginia)/ us-east-1a.
+
+IPv4 VPC CIDR block: 10.0.0.0/16
+
+IPv4 subnet CIDR block: 10.0.2.0/24
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/73c61db0-48fa-49cb-b9f8-ec4d823f80f1)
+
+Then click “Create Subnet” to create both public subnets. You should now see both subnets available.
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/2c8d9776-04d3-4021-b21f-8ce788d51ccf)
+
 
 
