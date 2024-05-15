@@ -50,7 +50,9 @@ Availability Zone: US East (N. Virginia)/ us-east-1a.
 IPv4 VPC CIDR block: 10.0.0.0/16
 
 IPv4 subnet CIDR block: 10.0.1.0/24
+
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/f2c086f9-fffd-43a1-b9a1-758e027f7ea3)
+
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/f9978444-7e6c-4387-aafa-92d146da897a)
 
 
