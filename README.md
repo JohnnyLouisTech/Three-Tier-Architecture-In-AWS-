@@ -80,3 +80,44 @@ VPC: Toy-Buzz-VPC.
 
 Click create route table.
 
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/bedfa413-e81d-43f7-9f95-eaa8d5fd99ee)
+
+Now lets connect our subnets we created earlier to the route table.
+
+click on the route table, go to the subnet associations tab and click edit subnet associations.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/d29790b3-93fb-41d3-8640-52c53c7ffc47)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/b5819e83-dafc-4777-9233-d68320639756)
+
+Select both Public subnets and click save associations.
+
+The Public Subnets are successfully attached to the route table.
+
+Click on Routes tab and click on edit routes
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/4c54cd71-4646-41b7-8906-59bbf246aa4e)
+
+Attach the Internet Gateway.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/f58a1b4f-e709-4b9b-b3e5-2aa6d47f530c)
+
+# NAT Gateway
+Click on NAT Gateway on the side panel underneath Virtual private cloud.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/dc80aa9e-a632-4806-a58c-0032a419b869)
+
+Click Create NAT Gateway.
+
+Name: Toy-Buzz-Public-NAT-Gateway.
+
+Subnet: Toy-Buzz-Public-Subnet-1.
+
+Connectivity Type: Public.
+
+Elastic IP allocation ID: Click on Allocate Elastic IP to generate it.
+
+click create NAT gateway.
+
+
+
