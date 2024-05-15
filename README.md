@@ -23,4 +23,7 @@ Tenancy: Default.
 Click create VPC.
 
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/244e7bb6-e3b5-44ad-b03c-2cf40f2b4d64)
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/0ea59253-61a8-49bb-829c-670ad92af42f)
 
+# We need to created an Internet Gateway for our VPC
+# Name Tag : Toy-Buzz-IGW
