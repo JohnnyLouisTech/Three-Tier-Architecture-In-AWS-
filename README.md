@@ -30,3 +30,23 @@ Name Tag : Toy-Buzz-IGW
 
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/826a42e9-e30c-4a91-8080-ff26f1156477)
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/c3e274b4-c093-44ab-9b99-9fcd11d7f975)
+
+Now we need to Attach it to the VPC and click on “Attach Internet Gateway”.
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/f50f5b74-5ca5-4f2e-af04-31b580f740a2)
+
+Please Select Toy-Buzz-IGW
+
+# Public Subnets
+Next, we need to create two Public Subnets for the VPC. Click on Subnets underneath the virtual private cloud section on the left.
+
+Click on create subnet.
+
+VPC ID: Toy-Buzz-VPC.
+
+Subnet Name: Toy-Buzz-Public-Subnet-1
+
+Availability Zone: US East (N. Virginia)/ us-east-1a.
+
+IPv4 VPC CIDR block: 10.0.0.0/16
+
+IPv4 subnet CIDR block: 10.0.1.0/24
