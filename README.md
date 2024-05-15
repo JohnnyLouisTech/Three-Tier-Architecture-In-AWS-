@@ -67,8 +67,16 @@ IPv4 subnet CIDR block: 10.0.2.0/24
 
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/73c61db0-48fa-49cb-b9f8-ec4d823f80f1)
 
-Then click “Create Subnet” to create both public subnets. You should now see both subnets available.
+Then click “Create Subnet” to create both public subnets. You should now see both subnets available as showing below. 
+
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/2c8d9776-04d3-4021-b21f-8ce788d51ccf)
 
+# We need to create our Public Route Table
+Click on Route tables on the left side underneath Virtual Private Cloud and click on Create route table.
 
+Name: Toy-Buzz-Route-Table.
+
+VPC: Toy-Buzz-VPC.
+
+Click create route table.
 
