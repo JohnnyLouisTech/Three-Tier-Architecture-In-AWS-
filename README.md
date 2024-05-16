@@ -285,5 +285,30 @@ IPv4 subnet CIDR block: 10.0.128.0/24
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/88daa9a5-75f8-44a3-b7ab-af181658d27f)
 
 
+# Private Route Table
+Name: Toy-Buzz-App-Private-Route-Table
+
+VPC: Toy-Buzz-VPC
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/36089ce3-b030-47e2-87ad-81705e9ff77b)
+
+Click create route table.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/b80f0fef-0d2f-448b-b183-4cda3089b4fb)
+
+Associate your Private Subnets to the Private Route Table.
+
+In Route Table, select Toy-Buzz-App-Private-Route-Table and select subnet associations tab then click on edit subnet associations under explicit associations.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/fdf5dc6a-9615-4baf-b01c-c6240f68cf79)
+
+Associate your Private Subnets to the Private Route Table.
+
+In Route Table, select Toy-Buzz-App-Private-Route-Table and select subnet associations tab then click on edit subnet associations under explicit associations.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/0ab6c5de-eafc-49e7-8091-6a7e2328f449)
+
+
+
 
 
