@@ -256,4 +256,34 @@ Lets verify our EC2’s were created.
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6feb419a-feef-4345-887a-59c2f24ba66d)
 
 
+# Objective 2: Create a Application Tier
+# Private Subnets
+VPC ID: Toy-Buzz-VPC.
+
+Subnet Name: Toy-Buzz-App-Private-Subnet-1
+
+Availability Zone: US East (N. Virginia)/ us-east-1a.
+
+IPv4 VPC CIDR block: 10.0.0.0/16
+
+IPv4 subnet CIDR block: 10.0.160.0/24
+
+VPC ID: Toy-Buzz-VPC.
+
+Subnet Name: Toy-Buzz-App-Private-Subnet-2
+
+Availability Zone: US East (N. Virginia)/ us-east-1a.
+
+IPv4 VPC CIDR block: 10.0.0.0/16
+
+IPv4 subnet CIDR block: 10.0.128.0/24
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/70d67042-d884-4bb8-91e4-4047a58291ad)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/a05c8175-e028-47dd-a720-3311786a0f67)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/88daa9a5-75f8-44a3-b7ab-af181658d27f)
+
+
+
 
