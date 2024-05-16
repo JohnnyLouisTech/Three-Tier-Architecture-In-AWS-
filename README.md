@@ -309,6 +309,158 @@ In Route Table, select Toy-Buzz-App-Private-Route-Table and select subnet associ
 ![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/0ab6c5de-eafc-49e7-8091-6a7e2328f449)
 
 
+Go to the Toy-Buzz-App-Private-Route-Table and click on routes and edit routes.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/0499c44c-6392-4492-804f-f4834be50825)
+
+Attach the NAT Gateway.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/5c6c60f9-e007-414b-b44e-cfdb59a68d5b)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/3443a744-0bfe-45fd-b2ec-f5385101ea5f)
+
+# AMI/Launch Template
+Create another launch template for your Application tier.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/5dbbf9f8-a2db-4ea4-b249-49cfb73e6bd3)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/a4a43534-a992-4cbc-877d-995fc074e0b8)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/808226b2-6ec7-429c-af84-0ed67b620e81)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/56519d7a-d316-4c91-9732-c3d0df4d27de)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/029c1843-a15c-406e-b1c2-6eabbd4b12c3)
+
+
+Click create launch template.
+
+# Auto-scaling Group
+Complete the steps to create a Autoscaling group.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/8b2770a9-b2ef-4511-953c-46c72fdb5ef8)
+
+# Security Group
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/dbe62a36-3dcc-4fa6-87b3-68d7a912f93d)
+
+# Objective 3: Create a Database Tier
+# Private Subnets
+VPC ID: Toy-Buzz-VPC.
+
+Subnet Name: Toy-Blitz-DB-Private-Subnet-1
+
+Availability Zone: US East (N. Virginia)/ us-east-1a.
+
+IPv4 VPC CIDR block: 10.0.0.0/16
+
+IPv4 subnet CIDR block: 10.0.96.0/24
+
+VPC ID: Toy-Buzz-VPC.
+
+Subnet Name: Toy-Buzz-DB-Private-Subnet-2
+
+Availability Zone: US East (N. Virginia)/ us-east-1a.
+
+IPv4 VPC CIDR block: 10.0.0.0/16
+
+IPv4 subnet CIDR block: 10.0.64.0/24
+
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/a00e7ddc-379e-4a40-a44f-0953cef7a1b1)
+
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/befd7da0-bf26-4fb8-a9ff-e05be81375e7)
+
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/4f47d011-d95c-46c9-8d93-b28f3fbe7a3f)
+
+# Private Route Table
+Name: Toy-Buzz-DB-Private-Route-Table
+
+VPC: Toy-Buzz-VPC
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/6bcb9b12-f91e-488d-860a-41845142ab41)
+
+Associate your Private Subnets to the Private Route Table.
+
+In Route Table, select Toy-Buzz-DB-Private-Route-Table and select subnet associations tab then click on edit subnet associations under explicit associations.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/7d5c9182-3315-468e-b5e6-0dfe49592116)
+
+Select Toy-Buzz-DB-Private-Subnet1 & Toy-Buzz-DB-Private-Subnet2.
+
+Click save association.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/de060dba-7a9a-4293-8dd4-bd95025b5f65)
+
+# Database Security Group
+Create a Database Security Group and allow port 3306 inbound for MySQL.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/a111b08b-5cba-4a1f-b60e-8de149aabf9e)
+
+
+# MySQL DatabaseType RDS
+Click create database.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/abe1934d-d43d-4a0d-b71b-88fc888c413f)
+
+Standard create.
+MySQL.
+Free Tier.
+DB instance identifier: database-1.
+
+Master username: admin.
+
+Self-managed.
+
+Master password: 12345678 (For demonstration purposes only you would created a more secure password in production.)
+
+Instance configuration: db.t3.micro.
+
+Storage: General Purpose SSD, 20 GIB.
+
+Connectivity:
+
+Do not connect to an EC2 compute resource.
+VPC: Toy-Buzz-VPC.
+Public Access: No
+Existing VPC security groups: Toy-Buzz-SG
+Availability Zone: us-east-1a
+Create Database.
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/a3363e7e-5e19-4dbc-984c-16177b8f62d9)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/db65988b-3aa7-4bd1-a5b7-2aeded383550)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/488deb73-3c53-41a8-b07d-0244964ad143)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/807dad1c-f339-47a5-97f5-c1bb09ff727a)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/9c1f4b5f-c431-442e-963d-462735514b46)
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/28564a68-3b8e-44b2-9d01-5235d826a875)
+
+The database tier is successfully created.
+
+Lets verify.
+
+Apache:
+
+![image](https://github.com/JohnnyLouisTech/Three-Tier-Architecture-In-AWS-/assets/29494723/432901eb-73b8-4922-bf17-5ba0f4d1a923)
+
+We did it! Well Done!
+
+# References:
+https://docs.aws.amazon.com/
+
+
+
+
+
+
+
+
 
 
 
